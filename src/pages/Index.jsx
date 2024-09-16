@@ -40,6 +40,8 @@ const Index = () => {
         <div className="flex flex-col items-center space-y-4">
           <SearchBar onSearch={handleSearch} />
           <Filters
+            kNeighbors={kNeighbors}
+            strength={strength}
             onKNeighborsChange={setKNeighbors}
             onStrengthChange={setStrength}
           />
