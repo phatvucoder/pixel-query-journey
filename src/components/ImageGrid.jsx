@@ -44,14 +44,14 @@ const ImageGrid = ({ images, onImageClick }) => {
               <span className="text-white font-semibold">View Details</span>
             </div>
             <div className="absolute top-2 right-2 flex space-x-1">
-              <Button variant="ghost" size="icon" className="bg-black bg-opacity-30 backdrop-blur-sm hover:bg-opacity-50">
+              <Button variant="ghost" size="icon" className="bg-black bg-opacity-30 hover:bg-opacity-50">
                 <ThumbsUp className="h-4 w-4 text-white" />
               </Button>
-              <Button variant="ghost" size="icon" className="bg-black bg-opacity-30 backdrop-blur-sm hover:bg-opacity-50">
+              <Button variant="ghost" size="icon" className="bg-black bg-opacity-30 hover:bg-opacity-50">
                 <ThumbsDown className="h-4 w-4 text-white" />
               </Button>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 py-1 px-2 bg-black bg-opacity-30 backdrop-blur-sm">
+            <div className="absolute bottom-0 left-0 right-0 py-1 px-2 bg-black bg-opacity-30">
               <p className="text-sm font-medium text-white text-center">{image.code}</p>
             </div>
           </div>
