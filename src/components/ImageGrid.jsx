@@ -6,11 +6,12 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react';
 const ImageGrid = ({ images, onImageClick }) => {
   const getYouTubeEmbedUrl = (url) => {
     const videoId = url.split('v=')[1];
-    return `https://www.youtube.com/embed/${videoId}?start=80&end=90&autoplay=0&mute=1&controls=0&loop=1&playlist=${videoId}&playbackRate=2`;
+    return `https://www.youtube.com/embed/${videoId}?autoplay=0&mute=1&controls=0&loop=1&playlist=${videoId}&playbackRate=2`;
   };
 
   const handleMouseEnter = (iframeRef) => {
     if (iframeRef.current) {
+      iframeRef.current.contentWindow.postMessage('{"event":"command","func":"seekTo","args":[0]}', '*');
       iframeRef.current.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     }
   };
