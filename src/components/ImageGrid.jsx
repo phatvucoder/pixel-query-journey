@@ -6,7 +6,7 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react';
 const ImageGrid = ({ images, onImageClick }) => {
   const getYouTubeEmbedUrl = (url) => {
     const videoId = url.split('v=')[1];
-    return `https://www.youtube.com/embed/${videoId}`;
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`;
   };
 
   return (
@@ -21,7 +21,7 @@ const ImageGrid = ({ images, onImageClick }) => {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover pointer-events-none"
               ></iframe>
             ) : (
               <>
