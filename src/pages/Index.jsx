@@ -14,9 +14,9 @@ const Index = () => {
   const handleSearch = (query) => {
     // Implement the search logic here
     console.log('Searching for:', query, 'with K-Neighbors:', kNeighbors, 'and Strength:', strength);
-    // For now, let's use dummy data
+    // For now, let's use dummy data with the YouTube video for the first image
     setSearchResults([
-      { id: 1, code: 'IMG001', staticUrl: '/placeholder.svg', gifUrl: '/placeholder.svg', description: 'Sample image 1' },
+      { id: 1, code: 'IMG001', staticUrl: '/placeholder.svg', gifUrl: '/placeholder.svg', description: 'Sample image 1', youtubeUrl: 'https://www.youtube.com/watch?v=grc0YSEdUQY' },
       { id: 2, code: 'IMG002', staticUrl: '/placeholder.svg', gifUrl: '/placeholder.svg', description: 'Sample image 2' },
       // Add more dummy images as needed
     ]);
